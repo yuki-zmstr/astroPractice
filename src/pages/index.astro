@@ -1,7 +1,6 @@
 ---
 import Header from "../components/Header.astro";
-import Navigation from "../components/Navigation.astro";
-import Content from "../components/Content.astro";
+import Content from "../components/Content";
 import Footer from "../components/Footer.astro";
 ---
 
@@ -16,8 +15,7 @@ import Footer from "../components/Footer.astro";
     <body>
         <h1>Astro</h1>
         <Header />
-        <Navigation />
-        <Content />
+        <Content client:load />
         <Footer />
     </body>
 </html>
