@@ -4,7 +4,7 @@ import Learning from './Learning';
 import Philosophy from './Philosophy';
 import Contact from './Contact';
 
-export default function NavBar() {
+export default function Content() {
     const [activeComponent, setActiveComponent] = useState('Career');
 
     const renderComponent = () => {
@@ -24,7 +24,7 @@ export default function NavBar() {
 
     return (
         <div>
-            <nav>
+            <nav class="nav-buttons">
                 <button onClick={() => setActiveComponent('Career')}>Career</button>
                 <button onClick={() => setActiveComponent('Learning')}>Learning</button>
                 <button onClick={() => setActiveComponent('Philosophy')}>Philosphy</button>

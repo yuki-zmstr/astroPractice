@@ -1,3 +1,7 @@
 export default function Learning() {
-    return <div>Learning</div>;
+    return (
+        <div>
+            <p>Some stuff I found interesting</p>
+        </div>
+    )
 }
