@@ -3,6 +3,7 @@ import Career from './Career';
 import Learning from './Learning';
 import Philosophy from './Philosophy';
 import Contact from './Contact';
+import styles from './Content.module.css'
 
 export default function Content() {
     const [activeComponent, setActiveComponent] = useState('Career');
@@ -24,11 +25,19 @@ export default function Content() {
 
     return (
         <div>
-            <nav class="nav-buttons">
-                <button onClick={() => setActiveComponent('Career')}>Career</button>
-                <button onClick={() => setActiveComponent('Learning')}>Learning</button>
-                <button onClick={() => setActiveComponent('Philosophy')}>Philosphy</button>
-                <button onClick={() => setActiveComponent('Contact')}>CV/Contact</button>
+            <nav class={styles.navbar}>
+                <button
+                    className={activeComponent === 'Career' ? 'active' : ''}
+                    onClick={() => setActiveComponent('Career')}>Career</button>
+                <button
+                    className={activeComponent === 'Learning' ? 'active' : ''}
+                    onClick={() => setActiveComponent('Learning')}>Learning</button>
+                <button
+                    className={activeComponent === 'Philosophy' ? 'active' : ''}
+                    onClick={() => setActiveComponent('Philosophy')}>Philosphy</button>
+                <button
+                    className={activeComponent === 'Contact' ? 'active' : ''}
+                    onClick={() => setActiveComponent('Contact')}>CV/Contact</button>
             </nav>
             <div>
                 {renderComponent()}
