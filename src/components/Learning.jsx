@@ -7,10 +7,13 @@ export default function Learning() {
             {data.entries.map(entry => (
                 <div>
                     <h4>{entry.header}</h4>
-                    {entry.content.map(item => (
-                        <li>{item.title}&nbsp;
-                            <a href={item.link} target="_blank">link</a>
-                        </li>))}
+                    <ul>
+                        {entry.content.map(item => (
+                            <li>{item.title}&nbsp;
+                                <a href={item.link} target="_blank">link</a>
+                            </li>))}
+                    </ul>
+
                 </div>
             ))}
         </div>
