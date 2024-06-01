@@ -6,11 +6,11 @@ export default function Career() {
         <div>
             <h4>Previous Education</h4>
             <ul>
-                {data.educationData.map(item => <li>{item}</li>)}
+                {data.educationExperiences.map(item => <li>{item}</li>)}
             </ul>
             <h4>Career</h4>
             <ul>
-                {data.workData.map(item => <li>{item}</li>)}
+                {data.workExperiences.map(item => <li>{item}</li>)}
             </ul>
         </div>
     )
